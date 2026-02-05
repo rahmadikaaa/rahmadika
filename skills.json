@@ -1,20 +1,23 @@
 {
   "professional_roles": [
-    "The Cognitive QA Architect",
+    "Technical Quality Strategist",
     "Automation & AI System Architect",
     "DevOps Specialist"
   ],
   "core_competencies": [
-    "End-to-End & API Automation",
-    "SQL Backend Data Validation",
-    "Prompt Engineering for App Dev",
-    "Full-Funnel Digital Marketing",
+    "SQL Backend Validation & Data Integrity",
+    "System Analysis (Flowchart, DFD, ERD)",
+    "End-to-End & API Automation Testing",
+    "Prompt Engineering for App Development",
+    "Full-Funnel Digital Marketing Strategy",
     "RBAC & Security Analysis"
   ],
   "technical_stack": {
-    "cloud_devops": ["GCP (VM, Cloud Run)", "Linux Admin", "Firebase"],
-    "qa_tools": ["Postman", "Selenium", "JIRA", "Katalon Studio"],
-    "ai_automation": ["n8n", "LLM Integration", "FFmpeg Automation"],
+    "qa_methodology": ["Manual Testing", "Functional Testing", "API Automation", "Database Testing"],
+    "system_design": ["Flowchart", "DFD (Data Flow Diagram)", "ERD (Entity Relationship Diagram)"],
+    "qa_tools": ["Postman", "Selenium", "JIRA", "Katalon Studio", "SQL Query Analyzer"],
+    "cloud_devops": ["GCP (VM, Cloud Run)", "Firebase", "Linux Admin"],
+    "ai_automation": ["n8n", "LLM Integration", "Prompt Engineering"],
     "development": ["Laravel (API)", "React & Tailwind", "Meta Ads Manager"]
   }
 }

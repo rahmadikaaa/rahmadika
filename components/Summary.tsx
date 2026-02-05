@@ -5,21 +5,24 @@ import { BrainCircuit, CheckCircle2, Database, Cloud, Code2, Zap } from 'lucide-
 export const Summary: React.FC = () => {
   const skills = {
     professional_roles: [
-      "The Cognitive QA Architect",
+      "Technical Quality Strategist",
       "Automation & AI System Architect",
       "DevOps Specialist"
     ],
     core_competencies: [
-      "End-to-End & API Automation",
-      "SQL Backend Data Validation",
-      "Prompt Engineering for App Dev",
-      "Full-Funnel Digital Marketing",
+      "SQL Backend Validation & Data Integrity",
+      "System Analysis (Flowchart, DFD, ERD)",
+      "End-to-End & API Automation Testing",
+      "Prompt Engineering for App Development",
+      "Full-Funnel Digital Marketing Strategy",
       "RBAC & Security Analysis"
     ],
     technical_stack: {
-      cloud_devops: ["GCP (VM, Cloud Run)", "Linux Admin", "Firebase"],
-      qa_tools: ["Postman", "Selenium", "JIRA", "Katalon Studio"],
-      ai_automation: ["n8n", "LLM Integration", "FFmpeg Automation"],
+      qa_methodology: ["Manual Testing", "Functional Testing", "API Automation", "Database Testing"],
+      system_design: ["Flowchart", "DFD (Data Flow Diagram)", "ERD (Entity Relationship Diagram)"],
+      qa_tools: ["Postman", "Selenium", "JIRA", "Katalon Studio", "SQL Query Analyzer"],
+      cloud_devops: ["GCP (VM, Cloud Run)", "Firebase", "Linux Admin"],
+      ai_automation: ["n8n", "LLM Integration", "Prompt Engineering"],
       development: ["Laravel (API)", "React & Tailwind", "Meta Ads Manager"]
     }
   };
@@ -27,27 +30,27 @@ export const Summary: React.FC = () => {
   const highlights = [
     {
       icon: <CheckCircle2 className="text-cyber-primary" />,
-      text: "Expert in end-to-end testing & API automation for enterprise CRM/ERP systems."
+      text: "SQL Backend Validation & Data Integrity: Expert dalam merancang test cases untuk validasi data, query optimization, dan database integrity assurance pada sistem enterprise."
+    },
+    {
+      icon: <Database className="text-green-400" />,
+      text: "System Analysis Documentation: Profisien dalam membuat Flowchart, DFD (Data Flow Diagram), dan ERD (Entity Relationship Diagram) untuk analisis alur kerja dan integritas sistem."
+    },
+    {
+      icon: <CheckCircle2 className="text-cyan-400" />,
+      text: "End-to-End & API Automation: Expert dalam otomasi testing (Selenium, Postman) untuk CRM/ERP systems dengan focus pada functional testing scenarios."
     },
     {
       icon: <Cloud className="text-cyan-400" />,
-      text: "Orchestrate GCP infrastructure (VM, Cloud Run) with cost optimization expertise."
+      text: "GCP Infrastructure Orchestration: Mengelola VM, Cloud Run, dan Firebase untuk deployment scalable dengan cost optimization expertise."
     },
     {
       icon: <BrainCircuit className="text-purple-400" />,
-      text: "Leverage LLMs for prompt-based development—accelerating architecture design & API integration."
-    },
-    {
-      icon: <Database className="text-cyber-primary" />,
-      text: "SQL backend validation & synthetic test data generation via AI-driven automation."
+      text: "Prompt-Based Development & LLM Integration: Akselerasi app development melalui AI-driven architecture design dan API integration strategy."
     },
     {
       icon: <Zap className="text-yellow-400" />,
-      text: "Full-funnel digital marketing strategy via Meta Ads with measurable ROI optimization."
-    },
-    {
-      icon: <Code2 className="text-green-400" />,
-      text: "Build automation workflows (n8n, FFmpeg) for large-scale content processing."
+      text: "Data-Driven Digital Marketing: Optimalkan strategi full-funnel Meta Ads campaigns dengan measurable ROI dan automation workflows via n8n."
     }
   ];
 
@@ -66,13 +69,10 @@ export const Summary: React.FC = () => {
             </h2>
             <div className="space-y-4 text-slate-300 leading-relaxed text-lg">
               <p>
-                Sebagai <span className="text-cyan-400 font-semibold">Professional Quality Assurance Architect</span>, saya spesialis dalam pengujian menyeluruh—dari end-to-end testing hingga API automation—untuk sistem enterprise kompleks (CRM/ERP) dengan fokus pada SQL backend validation dan data integrity assurance.
+                Saya adalah seorang <span className="text-cyan-400 font-semibold">Technical Quality Strategist</span> dengan pengalaman komprehensif dalam pengujian manual dan automasi untuk sistem enterprise kompleks (CRM/ERP). Memiliki spesialisasi dalam merancang skenario pengujian fungsional, validasi SQL backend, serta analisis alur kerja sistem melalui <span className="text-green-400 font-mono text-sm">Flowchart</span>, <span className="text-green-400 font-mono text-sm">DFD</span>, dan <span className="text-green-400 font-mono text-sm">ERD</span> untuk menjamin integritas data dan kualitas produk.
               </p>
               <p>
-                Sebagai <span className="text-purple-400 font-semibold">Founder Solusi MasaDepan</span>, saya menghadirkan transformasi digital komprehensif bagi UMKM melalui orchestration infrastruktur GCP (Virtual Machines, Cloud Run, Firebase) dengan optimasi cost-efficiency, serta akselerasi development via Prompt-Based Development menggunakan LLM canggih untuk menyusun arsitektur sistem & integrasi API secara presisi.
-              </p>
-              <p>
-                Keahlian saya mencakup: automation workflows (n8n, FFmpeg) untuk large-scale content processing, full-funnel digital marketing strategy via Meta Ads dengan pengukuran ROI terukur, serta RBAC & security analysis untuk memastikan sistem yang tangguh dan siap masa depan.
+                Sebagai <span className="text-purple-400 font-semibold">Pendiri Solusi MasaDepan</span>, saya menghadirkan transformasi digital bagi UMKM melalui kapasitas sebagai Automation Architect dan spesialis DevOps. Saya mempunyai kemampuan untuk mengorkestrasi infrastruktur pada Google Cloud Platform (GCP) serta mempercepat pengembangan aplikasi melalui metode Prompt-Based Development. Dengan mengintegrasikan AI ke dalam alur kerja, saya mampu membangun sistem pemrosesan data otomatis melalui n8n serta mengoptimalkan strategi Digital Marketing melalui Meta Ads untuk memastikan pertumbuhan bisnis yang berkelanjutan dan berbasis data.
               </p>
             </div>
             
@@ -132,11 +132,20 @@ export const Summary: React.FC = () => {
                 {/* Technical Stack */}
                 <div className="pl-4 text-purple-400">"technical_stack"<span className="text-slate-400">: {'{' /* opening brace */}</span></div>
                 
-                {/* Cloud & DevOps */}
-                <div className="pl-8 text-purple-400">"cloud_devops"<span className="text-slate-400">: [</span></div>
-                {skills.technical_stack.cloud_devops.map((tech, idx) => (
+                {/* QA Methodology */}
+                <div className="pl-8 text-purple-400">"qa_methodology"<span className="text-slate-400">: [</span></div>
+                {skills.technical_stack.qa_methodology.map((method, idx) => (
                   <div key={idx} className="pl-12 text-green-400">
-                    "{tech}"{idx < skills.technical_stack.cloud_devops.length - 1 ? ',' : ''}
+                    "{method}"{idx < skills.technical_stack.qa_methodology.length - 1 ? ',' : ''}
+                  </div>
+                ))}
+                <div className="pl-8 text-slate-400">],</div>
+
+                {/* System Design */}
+                <div className="pl-8 text-purple-400">"system_design"<span className="text-slate-400">: [</span></div>
+                {skills.technical_stack.system_design.map((design, idx) => (
+                  <div key={idx} className="pl-12 text-green-400">
+                    "{design}"{idx < skills.technical_stack.system_design.length - 1 ? ',' : ''}
                   </div>
                 ))}
                 <div className="pl-8 text-slate-400">],</div>
@@ -146,6 +155,15 @@ export const Summary: React.FC = () => {
                 {skills.technical_stack.qa_tools.map((tool, idx) => (
                   <div key={idx} className="pl-12 text-green-400">
                     "{tool}"{idx < skills.technical_stack.qa_tools.length - 1 ? ',' : ''}
+                  </div>
+                ))}
+                <div className="pl-8 text-slate-400">],</div>
+
+                {/* Cloud & DevOps */}
+                <div className="pl-8 text-purple-400">"cloud_devops"<span className="text-slate-400">: [</span></div>
+                {skills.technical_stack.cloud_devops.map((tech, idx) => (
+                  <div key={idx} className="pl-12 text-green-400">
+                    "{tech}"{idx < skills.technical_stack.cloud_devops.length - 1 ? ',' : ''}
                   </div>
                 ))}
                 <div className="pl-8 text-slate-400">],</div>
