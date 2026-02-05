@@ -1,21 +1,48 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Rahmadika Tri Putera 🚀
+### The Cognitive QA Architect | Founder of Solusi MasaDepan
 
-# Run and deploy your AI Studio app
+Professional Quality Assurance yang berorientasi detail dengan fokus pada integrasi AI untuk efisiensi testing. Saat ini sedang membangun **Solusi MasaDepan**, membantu UMKM bertransformasi secara digital melalui automasi dan AI.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1zp7lXVS2zhm7kaBqZe2t0lOLzdtGJwo9
+## 🛠️ Tech Stack & Expertise
+- **Quality Assurance:** Manual Testing, API Testing (Postman), Bug Tracking, Test Case Design.
+- **Languages & Frameworks:** SQL, Laravel (API Development), React/Tailwind (Frontend).
+- **AI & Automation:** n8n Workflow, Gemini AI Integration, LLM Prompt Engineering.
+- **Cloud & DevOps:** Google Cloud Platform (#JuaraGCP Tier 3), Linux (MX Linux enthusiast).
 
-## Run Locally
+---
 
-**Prerequisites:**  Node.js
+## 📂 Portfolio Highlights
 
+### 1. CRM/ERP Quality Assurance Documentation
+Dokumentasi komprehensif skenario pengujian (Positive & Negative) pada modul kritis bisnis:
+- **Modules:** Customer, Prospek, Quotation, Approval, Sales Order.
+- **Focus:** Validasi logika bisnis, limit wewenang (RBAC), dan integritas data.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-# rahmadika
+### 2. SQL Data Validation Project
+Eksperimen validasi data backend menggunakan query kompleks:
+- Manipulasi data JSON field untuk validasi pricelist produk.
+- Audit data integrity pada sistem ERP menggunakan PostgreSQL.
+
+### 3. Role-Based Access Control (RBAC) Analysis
+Analisis alur kerja dan hak akses pengguna untuk memastikan keamanan sistem:
+- Pemetaan wewenang Branch Manager, Sales, dan Admin.
+- Rekomendasi QA untuk skenario *edge-case* pada perpindahan data antar user.
+
+---
+
+## 📈 Current Projects & Certifications
+- **#JuaraGCP Season 12:** Sedang mengejar Tier 3 (Google Cloud Platform).
+- **Madu Muria:** Digital Marketing & Brand Development.
+- **Solusi MasaDepan:** AI Agent development untuk UMKM (Laundry Agent & Automasi).
+
+---
+
+## 📬 Get in Touch
+- **Founder of:** [Solusi MasaDepan]
+- **Specialty:** Quality Assurance & AI Workflow Architect.
+- **Current Goal:** Building a seamless bridge between manual QA and AI-driven automation.
+
+---
+*Generated with precision and a touch of AI.*
