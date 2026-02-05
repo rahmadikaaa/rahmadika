@@ -1,6 +1,8 @@
 import React from 'react';
 import { Hero } from './components/Hero';
 import { Summary } from './components/Summary';
+import { CaseStudyQA } from './components/CaseStudyQA';
+import { CaseStudyAIArchitect } from './components/CaseStudyAIArchitect';
 import { ProjectCRM } from './components/projects/ProjectCRM';
 import { ProjectSQL } from './components/projects/ProjectSQL';
 import { ProjectRBAC } from './components/projects/ProjectRBAC';
@@ -16,6 +18,10 @@ const App: React.FC = () => {
         <Hero />
         
         <Summary />
+        
+        <CaseStudyQA />
+        
+        <CaseStudyAIArchitect />
         
         <section id="projects" className="py-24 bg-cyber-dark relative">
             {/* Grid Background */}
