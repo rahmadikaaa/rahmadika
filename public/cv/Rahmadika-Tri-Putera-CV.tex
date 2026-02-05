@@ -1,0 +1,135 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[indonesian]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1 \vspace{-2pt}}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\begin{document}
+
+%----------HEADER----------
+\begin{center}
+    \textbf{\Huge \scshape Rahmadika Tri Putera} \\ \vspace{1pt}
+    \small (+62) 81219530902 $|$ \href{mailto:rahmadika.putera@gmail.com}{\underline{rahmadika.putera@gmail.com}} $|$ 
+\href{https://linkedin.com/in/rahmadikaa}{\underline{https://www.linkedin.com/in/rahmadikaa}} \\
+Jakarta Selatan, Indonesia
+\end{center}
+
+%-----------RINGKASAN KARIER-----------
+\section{Ringkasan Karier}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{Profesional QA dan Data yang berorientasi pada detail dengan rekam jejak dalam memvalidasi integritas sistem ERP dan pelaporan data strategis. Mahir dalam menyusun skenario pengujian yang komprehensif serta memiliki pemahaman logis tentang alur sistem (Flowchart dan ERD). Terbiasa bekerja dengan SQL dan alat otomasi (n8n) untuk meningkatkan efisiensi proses. Membawa kombinasi keahlian pengujian perangkat lunak dan analisis data untuk memastikan kualitas serta akurasi sistem MIS di perusahaan.}}
+\end{itemize}
+
+%-----------PENDIDIKAN-----------
+\section{Pendidikan}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+      {Universitas Pamulang}{2014 -- 2019}
+      {Sarjana Teknik Informatika}{}
+  \end{itemize}
+
+%-----------PENGALAMAN KERJA-----------
+\section{Pengalaman Kerja}
+  \begin{itemize}[leftmargin=0.15in, label={}]
+
+    \resumeSubheading
+      {Kasana Tekindo Gemilang}{Okt 2024 -- Nov 2025}
+      {IT Support System \& QA Staff}{Jakarta}
+      \begin{itemize}[leftmargin=0.2in]
+        \resumeItem{Melakukan pengujian sistem dan mendokumentasikan temuan untuk memastikan fungsionalitas dan keandalan sistem.}
+        \resumeItem{Menerjemahkan logika bisnis ke dalam skema teknis dan flowchart sederhana untuk memandu implementasi sistem.}
+        \resumeItem{Membangun alur kerja data otomatis menggunakan n8n untuk efisiensi pelaporan rutin.}
+      \end{itemize}
+
+    \resumeSubheading
+      {Astra Graphia Information Technology}{Feb 2023 -- Feb 2024}
+      {Quality Assurance Automation}{Jakarta}
+      \begin{itemize}[leftmargin=0.2in]
+        \resumeItem{Menyusun laporan competitive intelligence untuk Telkomsel dengan analisis data transaksi UMB/USSD bervolume tinggi.}
+        \resumeItem{Mengeksekusi query SQL kompleks untuk validasi konsistensi data antara frontend dan database backend.}
+        \resumeItem{Mengidentifikasi anomali data pada log transaksi melalui validasi ERD untuk mengoptimalkan keandalan sistem.}
+      \end{itemize}
+
+    \resumeSubheading
+      {Martha Tilaar Group}{Nov 2022 -- Feb 2023}
+      {IT Data Support \& Analyst}{Jakarta}
+      \begin{itemize}[leftmargin=0.2in]
+        \resumeItem{Melakukan debugging pada aplikasi web untuk meningkatkan performa dan pengalaman pengguna.}
+        \resumeItem{Berkolaborasi dalam penentuan struktur konten dan manajemen informasi sistem web perusahaan.}
+      \end{itemize}
+
+    \resumeSubheading
+      {Novel Pharmaceutical Laboratories}{Nov 2022 -- Feb 2023}
+      {Programmer}{Jakarta}
+      \begin{itemize}[leftmargin=0.2in]
+        \resumeItem{Mengembangkan aplikasi berdasarkan persyaratan teknis dan spesifikasi fungsional.}
+        \resumeItem{Mengelola dokumentasi versi aplikasi dan log perubahan (version control) secara sistematis.}
+        \resumeItem{Menyelesaikan troubleshooting teknis untuk menjaga stabilitas aplikasi manajemen informasi.}
+      \end{itemize}
+
+  \end{itemize}
+
+\section{Portofolio \& Proyek}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Quality Assurance Documentation}: \href{https://github.com/rahmadikaaa/My-Portofolio-Quality-Assurance/blob/main/Manual\%20Testing.md}{\underline{bit.ly/rahmadikaaporto}} \\
+     {Mendokumentasikan skenario pengujian manual yang komprehensif, mencakup pembuatan \textbf{Test Case} (Positive/Negative) dan manajemen \textbf{Bug Reporting}. Terbukti membantu dalam pemetaan logika sistem dan memastikan kualitas fungsional aplikasi sebelum rilis.}}
+ \end{itemize}
+
+
+%-----------KEAHLIAN-----------
+\section{Keahlian Profesional}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{QA \& MIS Focus}{: Pengujian Manual \& Otomasi, Pembuatan Test Scenario, Memahami Flowchart/DFD/ERD Dasar, Validasi Data ERP, Pelacakan Bug via Trello.} \\
+     \textbf{Data \& DB}{: SQL Query (MySQL), n8n Workflow Automation, Excel (Pivot, Data Cleaning), Dasar Analisis Data.} \\
+     \textbf{Tools}{: Familiar menggunakan Cypress, Katalon, Postman, SIGOS Mobileum, Draw.io (Diagramming), PHP, JavaScript Dasar.} \\
+     \textbf{AI \& Efisiensi}{: Prompt Engineering, Automasi Alur Kerja QA, Otomasi Pelaporan.}
+    }}
+ \end{itemize}
+
+\end{document}

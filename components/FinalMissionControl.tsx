@@ -129,8 +129,8 @@ export const FinalMissionControl: React.FC = () => {
             <p className="text-sm text-slate-400">Complete Case Studies</p>
           </div>
           <div className="p-4 rounded-lg bg-slate-800/30 border border-slate-700 text-center">
-            <div className="text-2xl font-bold text-cyan-400 mb-2">6+ Years</div>
-            <p className="text-sm text-slate-400">QA & Automation Experience</p>
+            <div className="text-2xl font-bold text-cyan-400 mb-2">2+ Years</div>
+            <p className="text-sm text-slate-400">QA Manual & Automation Experience</p>
           </div>
           <div className="p-4 rounded-lg bg-slate-800/30 border border-slate-700 text-center">
             <div className="text-2xl font-bold text-purple-400 mb-2">3.2x</div>

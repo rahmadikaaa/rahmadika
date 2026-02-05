@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahmadika Tri Putera - CV</title>
+    <title>Rahmadika Tri Putera - Curriculum Vitae</title>
     <style>
         * {
             margin: 0;
@@ -12,487 +12,323 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            font-family: Georgia, 'Times New Roman', serif;
+            line-height: 1.45;
+            color: #222;
+            background-color: #f8f8f8;
         }
         
         .container {
-            max-width: 850px;
-            margin: 20px auto;
-            background-color: white;
+            max-width: 8.5in;
+            height: auto;
+            margin: 10px auto;
             padding: 40px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         
-        header {
+        /* HEADER */
+        .header {
             text-align: center;
-            margin-bottom: 30px;
-            border-bottom: 3px solid #06b6d4;
-            padding-bottom: 20px;
+            margin-bottom: 12px;
+            border-bottom: 2pt solid #000;
+            padding-bottom: 8px;
         }
         
-        h1 {
-            font-size: 32px;
-            color: #0f172a;
-            margin-bottom: 5px;
+        .header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 3px;
         }
         
-        .tagline {
-            font-size: 16px;
-            color: #06b6d4;
-            font-weight: 600;
+        .contact {
+            font-size: 10px;
+            line-height: 1.4;
+        }
+        
+        .contact a {
+            color: #222;
+            text-decoration: none;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        /* SECTIONS */
+        section {
             margin-bottom: 10px;
         }
         
-        .contact-info {
-            font-size: 13px;
-            color: #666;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .contact-info span {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        section {
-            margin-bottom: 25px;
-        }
-        
-        h2 {
-            font-size: 18px;
-            color: #0f172a;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #06b6d4;
-            padding-bottom: 8px;
+        section h2 {
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 8px;
+            margin-bottom: 6px;
+            padding-bottom: 2px;
+            border-bottom: 1pt solid #000;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         
-        .job-item, .education-item, .project-item {
-            margin-bottom: 15px;
+        /* CONTENT */
+        .content {
+            font-size: 10px;
+            line-height: 1.4;
+            text-align: justify;
         }
         
-        .job-title {
-            font-weight: 700;
-            color: #0f172a;
-            font-size: 15px;
-        }
-        
-        .company {
-            color: #06b6d4;
-            font-weight: 600;
-            font-size: 14px;
-        }
-        
-        .dates {
-            color: #999;
-            font-size: 12px;
-            font-style: italic;
-        }
-        
-        ul {
-            margin-left: 20px;
-            margin-top: 8px;
-        }
-        
-        li {
-            margin-bottom: 6px;
-            color: #555;
-            font-size: 13px;
-        }
-        
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 10px;
-        }
-        
-        .tech-badge {
-            background-color: #f0f9ff;
-            border-left: 3px solid #06b6d4;
-            padding: 6px 12px;
-            font-size: 12px;
-            color: #0369a1;
-            font-weight: 500;
-            border-radius: 3px;
-        }
-        
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 12px;
-        }
-        
-        .metric-card {
-            background-color: #f0f9ff;
-            border-left: 4px solid #06b6d4;
-            padding: 12px;
-            border-radius: 4px;
-        }
-        
-        .metric-value {
-            font-size: 18px;
-            font-weight: 700;
-            color: #06b6d4;
-        }
-        
-        .metric-label {
-            font-size: 12px;
-            color: #666;
-            margin-top: 4px;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 12px;
-            margin-top: 12px;
-        }
-        
-        .skill-category {
-            background-color: #f9fafb;
-            padding: 12px;
-            border-left: 4px solid #06b6d4;
-            border-radius: 3px;
-        }
-        
-        .skill-category-title {
-            font-weight: 700;
-            color: #0f172a;
-            font-size: 13px;
+        /* JOB ENTRIES */
+        .job-entry {
             margin-bottom: 8px;
+            font-size: 10px;
         }
         
-        .skill-item {
-            font-size: 12px;
-            color: #555;
-            padding: 3px 0;
-        }
-        
-        .skill-item:before {
-            content: "▸ ";
-            color: #06b6d4;
+        .job-header {
+            display: flex;
+            justify-content: space-between;
             font-weight: bold;
+            margin-bottom: 2px;
         }
         
-        strong {
-            color: #0f172a;
+        .job-subheader {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            font-size: 9px;
+            margin-bottom: 3px;
         }
         
+        .job-entry ul {
+            margin-left: 18px;
+            margin-top: 2px;
+        }
+        
+        .job-entry li {
+            margin-bottom: 1px;
+            font-size: 9px;
+            line-height: 1.35;
+        }
+        
+        /* EDUCATION */
+        .edu-entry {
+            margin-bottom: 6px;
+            font-size: 10px;
+        }
+        
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            margin-bottom: 1px;
+        }
+        
+        .edu-degree {
+            font-style: italic;
+            font-size: 9px;
+        }
+        
+        /* PORTFOLIO */
+        .portfolio-item {
+            font-size: 9px;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+        
+        .portfolio-title {
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .portfolio-link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .portfolio-description {
+            text-align: justify;
+        }
+        
+        /* SKILLS */
+        .skills-content {
+            font-size: 9px;
+            line-height: 1.5;
+        }
+        
+        .skill-line {
+            margin-bottom: 4px;
+        }
+        
+        .skill-label {
+            font-weight: bold;
+            display: inline-block;
+            width: 1.3in;
+            vertical-align: top;
+        }
+        
+        .skill-items {
+            display: inline;
+        }
+        
+        /* PRINT STYLES */
         @media print {
             body {
                 background-color: white;
+                padding: 0;
             }
+            
             .container {
-                box-shadow: none;
-                margin: 0;
                 max-width: 100%;
+                margin: 0;
+                padding: 0.5in 0.75in;
+                box-shadow: none;
             }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @page {
+            margin: 0.5in;
+            size: letter;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="tagline">The Cognitive QA Architect</div>
-            <h1>Rahmadika Tri Putera</h1>
-            <div class="contact-info">
-                <span>📧 rahmadika.3putera@gmail.com</span>
-                <span>💼 linkedin.com/in/rahmadika</span>
-                <span>📱 +62-818-XXXXXXX</span>
-                <span>🌐 Jakarta, Indonesia</span>
+        <!-- HEADER -->
+        <div class="header">
+            <h1>RAHMADIKA TRI PUTERA</h1>
+            <div class="contact">
+                (+62) 81219530902 | <a href="mailto:rahmadika.putera@gmail.com">rahmadika.putera@gmail.com</a> | 
+                <a href="https://www.linkedin.com/in/rahmadikaa" target="_blank">linkedin.com/in/rahmadikaa</a> | 
+                Jakarta Selatan, Indonesia
             </div>
-        </header>
+        </div>
 
+        <!-- RINGKASAN KARIER -->
         <section>
-            <h2>Professional Summary</h2>
-            <p style="margin-bottom: 12px; color: #555;">
-                Technical Quality Strategist dan AI Automation Architect dengan 6+ tahun pengalaman dalam enterprise-grade QA testing, system design, dan intelligent automation. Spesialis dalam membangun framework testing yang rigorous, mendesain scalable infrastructure di GCP, dan mengintegrasikan AI/LLM untuk business intelligence dan marketing automation.
-            </p>
-            <p style="color: #555;">
-                Founder Solusi MasaDepan - transformasi digital untuk UMKM melalui GCP orchestration, Prompt-Based Development, dan Meta Ads optimization. Obsessed dengan data-driven decision making dan quality assurance di setiap layer sistem.
-            </p>
-            <div class="metrics">
-                <div class="metric-card">
-                    <div class="metric-value">95%</div>
-                    <div class="metric-label">Test Coverage Achievement</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">87%</div>
-                    <div class="metric-label">Bug Detection Rate</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">3.2x</div>
-                    <div class="metric-label">Average Marketing ROI</div>
-                </div>
-                <div class="metric-card">
-                    <div class="metric-value">99.95%</div>
-                    <div class="metric-label">System Uptime</div>
-                </div>
+            <h2>Ringkasan Karier</h2>
+            <div class="content">
+                Profesional QA dan Data yang berorientasi pada detail dengan rekam jejak dalam memvalidasi integritas sistem ERP dan pelaporan data strategis. Mahir dalam menyusun skenario pengujian yang komprehensif serta memiliki pemahaman logis tentang alur sistem (Flowchart dan ERD). Terbiasa bekerja dengan SQL dan alat otomasi (n8n) untuk meningkatkan efisiensi proses. Membawa kombinasi keahlian pengujian perangkat lunak dan analisis data untuk memastikan kualitas serta akurasi sistem MIS di perusahaan.
             </div>
         </section>
 
+        <!-- PENDIDIKAN -->
         <section>
-            <h2>Core Competencies</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-category-title">QA & Testing</div>
-                    <div class="skill-item">Test Planning & Strategy</div>
-                    <div class="skill-item">Automated Testing (Selenium, Katalon)</div>
-                    <div class="skill-item">API Testing (Postman, REST)</div>
-                    <div class="skill-item">Database Testing & SQL</div>
+            <h2>Pendidikan</h2>
+            <div class="edu-entry">
+                <div class="edu-header">
+                    <span>Universitas Pamulang</span>
+                    <span>2014 — 2019</span>
                 </div>
-                
-                <div class="skill-category">
-                    <div class="skill-category-title">System Design</div>
-                    <div class="skill-item">DFD & ERD Documentation</div>
-                    <div class="skill-item">Architecture Design</div>
-                    <div class="skill-item">Flowchart & Wireframing</div>
-                    <div class="skill-item">Technical Documentation</div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="skill-category-title">Cloud & DevOps</div>
-                    <div class="skill-item">GCP (Cloud Run, Firestore, Scheduler)</div>
-                    <div class="skill-item">Terraform Infrastructure-as-Code</div>
-                    <div class="skill-item">Docker & Container Orchestration</div>
-                    <div class="skill-item">CI/CD Pipeline Design (Cloud Build)</div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="skill-category-title">AI & Automation</div>
-                    <div class="skill-item">LLM Integration (OpenAI GPT-4)</div>
-                    <div class="skill-item">n8n Workflow Orchestration</div>
-                    <div class="skill-item">LangChain & Pinecone Vector DB</div>
-                    <div class="skill-item">Prompt Engineering & Optimization</div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="skill-category-title">Marketing & Analytics</div>
-                    <div class="skill-item">Meta Conversion API & Graph API</div>
-                    <div class="skill-item">Google Analytics 4 & BigQuery</div>
-                    <div class="skill-item">Attribution Modeling</div>
-                    <div class="skill-item">Data-Driven Campaign Strategy</div>
-                </div>
-                
-                <div class="skill-category">
-                    <div class="skill-category-title">Development & Tools</div>
-                    <div class="skill-item">TypeScript & React Frontend</div>
-                    <div class="skill-item">Laravel 10 Backend</div>
-                    <div class="skill-item">PostgreSQL & Redis</div>
-                    <div class="skill-item">Git & Version Control</div>
-                </div>
+                <div class="edu-degree">Sarjana Teknik Informatika</div>
             </div>
         </section>
 
+        <!-- PENGALAMAN KERJA -->
         <section>
-            <h2>Professional Experience</h2>
+            <h2>Pengalaman Kerja</h2>
             
-            <div class="job-item">
-                <div class="job-title">Founder & QA Architect</div>
-                <div class="company">Solusi MasaDepan | Digital Transformation Agency</div>
-                <div class="dates">2021 - Present</div>
-                <ul>
-                    <li><strong>Strategic Direction:</strong> Build UMKM digital transformation solutions through GCP orchestration, intelligent automation, and data-driven marketing</li>
-                    <li><strong>AI Integration:</strong> Implement LLM-based solutions for customer intelligence, campaign optimization, and predictive analytics</li>
-                    <li><strong>Marketing Automation:</strong> Design end-to-end Meta Ads campaigns with real-time dashboard, achieving 3.2x-5.5x ROAS</li>
-                    <li><strong>Infrastructure:</strong> Architect scalable GCP infrastructure using Terraform, Cloud Run, and serverless patterns</li>
-                    <li><strong>Key Clients:</strong> Madu Muria (honey product brand), E-commerce platforms, Digital service providers</li>
-                </ul>
-                <div class="tech-stack">
-                    <span class="tech-badge">GCP</span>
-                    <span class="tech-badge">n8n</span>
-                    <span class="tech-badge">OpenAI</span>
-                    <span class="tech-badge">Meta API</span>
-                    <span class="tech-badge">BigQuery</span>
-                    <span class="tech-badge">Terraform</span>
-                    <span class="tech-badge">Docker</span>
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>IT Support System & QA Staff</span>
+                    <span>Okt 2024 — Nov 2025</span>
                 </div>
+                <div class="job-subheader">
+                    <span>Kasana Tekindo Gemilang</span>
+                    <span>Jakarta</span>
+                </div>
+                <ul>
+                    <li>Melakukan pengujian sistem dan mendokumentasikan temuan untuk memastikan fungsionalitas dan keandalan sistem.</li>
+                    <li>Menerjemahkan logika bisnis ke dalam skema teknis dan flowchart sederhana untuk memandu implementasi sistem.</li>
+                    <li>Membangun alur kerja data otomatis menggunakan n8n untuk efisiensi pelaporan rutin.</li>
+                </ul>
             </div>
 
-            <div class="job-item">
-                <div class="job-title">Quality Assurance Specialist & Automation Engineer</div>
-                <div class="company">Enterprise Software Company (Confidential)</div>
-                <div class="dates">2018 - 2021</div>
-                <ul>
-                    <li><strong>Test Framework:</strong> Designed comprehensive automated testing framework achieving 95% test coverage</li>
-                    <li><strong>Bug Detection:</strong> Implemented data-driven testing strategy with 87% bug detection rate pre-production</li>
-                    <li><strong>Performance:</strong> Achieved 3.5x testing automation efficiency through intelligent test case design</li>
-                    <li><strong>Data Integrity:</strong> Established database validation protocols ensuring 99.8% data integrity across transactions</li>
-                    <li><strong>Documentation:</strong> Created DFD, ERD, and system flowcharts for complex multi-tier applications</li>
-                </ul>
-                <div class="tech-stack">
-                    <span class="tech-badge">Selenium</span>
-                    <span class="tech-badge">Postman</span>
-                    <span class="tech-badge">SQL</span>
-                    <span class="tech-badge">JIRA</span>
-                    <span class="tech-badge">Katalon Studio</span>
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Quality Assurance Automation</span>
+                    <span>Feb 2023 — Feb 2024</span>
                 </div>
+                <div class="job-subheader">
+                    <span>Astra Graphia Information Technology</span>
+                    <span>Jakarta</span>
+                </div>
+                <ul>
+                    <li>Menyusun laporan competitive intelligence untuk Telkomsel dengan analisis data transaksi UMB/USSD bervolume tinggi.</li>
+                    <li>Mengeksekusi query SQL kompleks untuk validasi konsistensi data antara frontend dan database backend.</li>
+                    <li>Mengidentifikasi anomali data pada log transaksi melalui validasi ERD untuk mengoptimalkan keandalan sistem.</li>
+                </ul>
             </div>
 
-            <div class="job-item">
-                <div class="job-title">Junior QA Engineer</div>
-                <div class="company">Software Testing Services Firm</div>
-                <div class="dates">2017 - 2018</div>
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>IT Data Support & Analyst</span>
+                    <span>Nov 2022 — Feb 2023</span>
+                </div>
+                <div class="job-subheader">
+                    <span>Martha Tilaar Group</span>
+                    <span>Jakarta</span>
+                </div>
                 <ul>
-                    <li>Manual functional testing and test case design</li>
-                    <li>API testing using RESTful principles</li>
-                    <li>Test execution and defect reporting</li>
-                    <li>Basic SQL query validation for data accuracy</li>
+                    <li>Melakukan debugging pada aplikasi web untuk meningkatkan performa dan pengalaman pengguna.</li>
+                    <li>Berkolaborasi dalam penentuan struktur konten dan manajemen informasi sistem web perusahaan.</li>
+                </ul>
+            </div>
+
+            <div class="job-entry">
+                <div class="job-header">
+                    <span>Programmer</span>
+                    <span>Nov 2022 — Feb 2023</span>
+                </div>
+                <div class="job-subheader">
+                    <span>Novel Pharmaceutical Laboratories</span>
+                    <span>Jakarta</span>
+                </div>
+                <ul>
+                    <li>Mengembangkan aplikasi berdasarkan persyaratan teknis dan spesifikasi fungsional.</li>
+                    <li>Mengelola dokumentasi versi aplikasi dan log perubahan (version control) secara sistematis.</li>
+                    <li>Menyelesaikan troubleshooting teknis untuk menjaga stabilitas aplikasi manajemen informasi.</li>
                 </ul>
             </div>
         </section>
 
+        <!-- PORTOFOLIO & PROYEK -->
         <section>
-            <h2>Key Projects & Case Studies</h2>
-            
-            <div class="project-item">
-                <div class="job-title">Madu Muria AI-Driven Marketing Campaign</div>
-                <div class="company">Strategic Campaign Architecture & Execution</div>
-                <div class="dates">2023 - 2024</div>
-                <ul>
-                    <li><strong>Challenge:</strong> Scale luxury honey product brand during competitive season with data-driven strategy</li>
-                    <li><strong>Solution:</strong> Designed 3-phase campaign roadmap (Munggahan/Awareness, Penetrasi/Scaling, Peak/Premium) with AI-powered audience intelligence</li>
-                    <li><strong>AI Architecture:</strong> NotebookLM (Reader) for knowledge synthesis + AntiGravity (Builder) for content generation via MCP protocol</li>
-                    <li><strong>Results:</strong> 1M-3M+ reach per phase, 0.7-1.2% CTR, 4.0x-5.5x ROAS, premium positioning established</li>
-                </ul>
-                <div class="tech-stack">
-                    <span class="tech-badge">Meta API</span>
-                    <span class="tech-badge">BigQuery</span>
-                    <span class="tech-badge">NotebookLM</span>
-                    <span class="tech-badge">AntiGravity</span>
-                    <span class="tech-badge">Data Studio</span>
-                </div>
-            </div>
-
-            <div class="project-item">
-                <div class="job-title">Enterprise QA Testing Framework</div>
-                <div class="company">Multi-tier Application Quality Assurance</div>
-                <div class="dates">2018 - 2021</div>
-                <ul>
-                    <li><strong>Achievement:</strong> 95% test coverage across API, UI, and database layers</li>
-                    <li><strong>Detection Rate:</strong> 87% bug detection rate pre-production environment</li>
-                    <li><strong>Automation:</strong> 3.5x improvement in testing efficiency through intelligent automation</li>
-                    <li><strong>Integrity:</strong> 99.8% data accuracy across complex transaction workflows</li>
-                </ul>
-                <div class="tech-stack">
-                    <span class="tech-badge">Selenium</span>
-                    <span class="tech-badge">Postman</span>
-                    <span class="tech-badge">SQL</span>
-                    <span class="tech-badge">Katalon</span>
-                </div>
-            </div>
-
-            <div class="project-item">
-                <div class="job-title">GCP Infrastructure & AI Automation</div>
-                <div class="company">Scalable Cloud Architecture Design</div>
-                <div class="dates">2021 - Present</div>
-                <ul>
-                    <li><strong>Architecture:</strong> 4-layer design (Backend, AI, Cloud, Marketing) integrated via n8n workflows</li>
-                    <li><strong>Infrastructure:</strong> 80% automation reduction through intelligent workflow design</li>
-                    <li><strong>Deployment:</strong> 4x faster deployment speed using Cloud Build CI/CD</li>
-                    <li><strong>Cost:</strong> 60% cost optimization through serverless patterns</li>
-                    <li><strong>Reliability:</strong> 99.95% uptime with disaster recovery protocols</li>
-                </ul>
-                <div class="tech-stack">
-                    <span class="tech-badge">GCP</span>
-                    <span class="tech-badge">Cloud Run</span>
-                    <span class="tech-badge">Terraform</span>
-                    <span class="tech-badge">n8n</span>
-                    <span class="tech-badge">Docker</span>
+            <h2>Portofolio & Proyek</h2>
+            <div class="portfolio-item">
+                <div class="portfolio-title">Quality Assurance Documentation</div>
+                <div class="portfolio-description">
+                    <a href="https://github.com/rahmadikaaa/My-Portofolio-Quality-Assurance/blob/main/Manual%20Testing.md" target="_blank" class="portfolio-link">bit.ly/rahmadikaaporto</a> 
+                    — Mendokumentasikan skenario pengujian manual yang komprehensif, mencakup pembuatan <strong>Test Case</strong> (Positive/Negative) dan manajemen <strong>Bug Reporting</strong>. Terbukti membantu dalam pemetaan logika sistem dan memastikan kualitas fungsional aplikasi sebelum rilis.
                 </div>
             </div>
         </section>
 
+        <!-- KEAHLIAN PROFESIONAL -->
         <section>
-            <h2>Technical Stack</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                <div>
-                    <strong style="display: block; margin-bottom: 8px; color: #0f172a;">Testing & QA</strong>
-                    <div style="font-size: 12px; color: #555; line-height: 2;">
-                        Selenium, Katalon Studio, Postman, JIRA, JMeter, SQL Testing
-                    </div>
+            <h2>Keahlian Profesional</h2>
+            <div class="skills-content">
+                <div class="skill-line">
+                    <span class="skill-label"><strong>QA & MIS Focus:</strong></span>
+                    <span class="skill-items">Pengujian Manual & Otomasi, Pembuatan Test Scenario, Memahami Flowchart/DFD/ERD Dasar, Validasi Data ERP, Pelacakan Bug via Trello.</span>
                 </div>
-                <div>
-                    <strong style="display: block; margin-bottom: 8px; color: #0f172a;">Cloud & DevOps</strong>
-                    <div style="font-size: 12px; color: #555; line-height: 2;">
-                        GCP, Terraform, Docker, Kubernetes, Cloud Build, CI/CD
-                    </div>
+                <div class="skill-line">
+                    <span class="skill-label"><strong>Data & DB:</strong></span>
+                    <span class="skill-items">SQL Query (MySQL), n8n Workflow Automation, Excel (Pivot, Data Cleaning), Dasar Analisis Data.</span>
                 </div>
-                <div>
-                    <strong style="display: block; margin-bottom: 8px; color: #0f172a;">AI & Automation</strong>
-                    <div style="font-size: 12px; color: #555; line-height: 2;">
-                        OpenAI GPT-4, LangChain, Pinecone, n8n, NotebookLM, AntiGravity
-                    </div>
+                <div class="skill-line">
+                    <span class="skill-label"><strong>Tools:</strong></span>
+                    <span class="skill-items">Familiar Cypress, Katalon, Postman, SIGOS Mobileum, Draw.io (Diagramming), PHP, JavaScript Dasar.</span>
                 </div>
-                <div>
-                    <strong style="display: block; margin-bottom: 8px; color: #0f172a;">Marketing & Analytics</strong>
-                    <div style="font-size: 12px; color: #555; line-height: 2;">
-                        Meta API, BigQuery, Analytics 4, Data Studio, Attribution
-                    </div>
-                </div>
-                <div>
-                    <strong style="display: block; margin-bottom: 8px; color: #0f172a;">Development</strong>
-                    <div style="font-size: 12px; color: #555; line-height: 2;">
-                        TypeScript, React, Laravel, Node.js, PostgreSQL, Redis
-                    </div>
-                </div>
-                <div>
-                    <strong style="display: block; margin-bottom: 8px; color: #0f172a;">Databases</strong>
-                    <div style="font-size: 12px; color: #555; line-height: 2;">
-                        PostgreSQL, Firestore, BigQuery, Redis, MySQL
-                    </div>
+                <div class="skill-line">
+                    <span class="skill-label"><strong>AI & Efisiensi:</strong></span>
+                    <span class="skill-items">Prompt Engineering, Automasi Alur Kerja QA, Otomasi Pelaporan.</span>
                 </div>
             </div>
-        </section>
-
-        <section>
-            <h2>Education & Certifications</h2>
-            <div class="education-item">
-                <div class="job-title">Formal Education</div>
-                <div class="company">Relevant Computer Science / Engineering Background</div>
-            </div>
-            <div class="education-item">
-                <div class="job-title">Professional Certifications</div>
-                <ul>
-                    <li>Google Cloud Certified (GCP) - In Progress</li>
-                    <li>QA & Testing Methodologies - Completed</li>
-                    <li>n8n Automation Specialist - Self-trained</li>
-                    <li>Prompt Engineering & LLM Integration - OpenAI</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Key Achievements</h2>
-            <ul>
-                <li><strong>95% Test Coverage:</strong> Designed comprehensive testing framework for enterprise-grade applications</li>
-                <li><strong>87% Bug Detection:</strong> Implemented intelligent test strategy with pre-production bug detection</li>
-                <li><strong>3.2x Marketing ROI:</strong> Data-driven campaigns with real-time optimization and attribution modeling</li>
-                <li><strong>99.95% System Uptime:</strong> Enterprise-grade infrastructure with disaster recovery and failover protocols</li>
-                <li><strong>80% Automation Reduction:</strong> Built intelligent automation workflows reducing manual testing by 80%</li>
-                <li><strong>Founder:</strong> Solusi MasaDepan - Successfully scaling digital transformation agency with proven client success</li>
-            </ul>
-        </section>
-
-        <section style="background-color: #f0f9ff; padding: 15px; border-radius: 5px; border-left: 4px solid #06b6d4;">
-            <h2 style="border-bottom-color: #06b6d4;">Current Opportunities</h2>
-            <p>Actively seeking roles as:</p>
-            <ul>
-                <li><strong>QA Architect / QA Leader:</strong> Building and scaling QA methodologies for enterprise teams</li>
-                <li><strong>AI Automation Architect:</strong> Designing intelligent automation solutions with LLM integration</li>
-                <li><strong>DevOps/Infrastructure Engineer:</strong> Building scalable cloud infrastructure on GCP with Terraform</li>
-                <li><strong>Technical Lead:</strong> Combining QA discipline with innovation to lead technical initiatives</li>
-            </ul>
         </section>
     </div>
 </body>
