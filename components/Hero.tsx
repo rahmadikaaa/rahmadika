@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
           transition={{ delay: 0.4, duration: 0.6 }}
           className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          "Bridging the gap between software quality and AI-driven automation."
+          "Membangun sistem yang tangguh, efisien, dan siap menghadapi masa depan."
         </motion.p>
 
         <motion.div 

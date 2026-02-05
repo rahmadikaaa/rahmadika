@@ -1,0 +1,20 @@
+{
+  "professional_roles": [
+    "The Cognitive QA Architect",
+    "Automation & AI System Architect",
+    "DevOps Specialist"
+  ],
+  "core_competencies": [
+    "End-to-End & API Automation",
+    "SQL Backend Data Validation",
+    "Prompt Engineering for App Dev",
+    "Full-Funnel Digital Marketing",
+    "RBAC & Security Analysis"
+  ],
+  "technical_stack": {
+    "cloud_devops": ["GCP (VM, Cloud Run)", "Linux Admin", "Firebase"],
+    "qa_tools": ["Postman", "Selenium", "JIRA", "Katalon Studio"],
+    "ai_automation": ["n8n", "LLM Integration", "FFmpeg Automation"],
+    "development": ["Laravel (API)", "React & Tailwind", "Meta Ads Manager"]
+  }
+}
