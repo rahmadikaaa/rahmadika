@@ -1,6 +1,7 @@
 import React from 'react';
 import { Hero } from './components/Hero';
 import { Summary } from './components/Summary';
+import { TechnicalCredentials } from './components/TechnicalCredentials';
 import { CaseStudyQA } from './components/CaseStudyQA';
 import { CaseStudyAIArchitect } from './components/CaseStudyAIArchitect';
 import { CaseStudyMaduMuria } from './components/CaseStudyMaduMuria';
@@ -20,6 +21,8 @@ const App: React.FC = () => {
         <Hero />
         
         <Summary />
+        
+        <TechnicalCredentials />
         
         <CaseStudyAIArchitect />
         
