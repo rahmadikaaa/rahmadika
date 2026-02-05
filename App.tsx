@@ -4,6 +4,7 @@ import { Summary } from './components/Summary';
 import { CaseStudyQA } from './components/CaseStudyQA';
 import { CaseStudyAIArchitect } from './components/CaseStudyAIArchitect';
 import { CaseStudyMaduMuria } from './components/CaseStudyMaduMuria';
+import { FinalMissionControl } from './components/FinalMissionControl';
 import { ProjectCRM } from './components/projects/ProjectCRM';
 import { ProjectSQL } from './components/projects/ProjectSQL';
 import { ProjectRBAC } from './components/projects/ProjectRBAC';
@@ -19,8 +20,6 @@ const App: React.FC = () => {
         <Hero />
         
         <Summary />
-        
-        <CaseStudyQA />
         
         <CaseStudyAIArchitect />
         
@@ -69,6 +68,10 @@ const App: React.FC = () => {
                 </div>
             </div>
         </section>
+
+        <CaseStudyQA />
+
+        <FinalMissionControl />
       </main>
 
       <Footer />
