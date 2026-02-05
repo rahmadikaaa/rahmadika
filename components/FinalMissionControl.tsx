@@ -7,13 +7,13 @@ export const FinalMissionControl: React.FC = () => {
     const message = encodeURIComponent(
       "Halo Rahmadika, saya [Nama] dari [Perusahaan]. Saya melihat portofolio 'The Cognitive QA Architect' Anda dan tertarik untuk berdiskusi lebih lanjut mengenai peluang kolaborasi."
     );
-    const whatsappUrl = `https://wa.me/62818XXXXXXX?text=${message}`;
+    const whatsappUrl = `https://wa.me/6281234567890?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleCVDownload = () => {
     // CV download logic - akan mengarah ke file CV yang di-host
-    window.open('/cv/Rahmadika-Tri-Putera-CV.pdf', '_blank');
+    window.open('/cv/Rahmadika-Tri-Putera-CV.html', '_blank');
   };
 
   return (
