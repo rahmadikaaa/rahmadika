@@ -7,7 +7,7 @@ export const FinalMissionControl: React.FC = () => {
     const message = encodeURIComponent(
       "Halo Rahmadika, saya [Nama] dari [Perusahaan]. Saya melihat portofolio 'The Cognitive QA Architect' Anda dan tertarik untuk berdiskusi lebih lanjut mengenai peluang kolaborasi."
     );
-    const whatsappUrl = `https://wa.me/6281234567890?text=${message}`;
+    const whatsappUrl = `https://wa.me/6281219530902?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 

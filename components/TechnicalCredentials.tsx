@@ -189,7 +189,7 @@ export const TechnicalCredentials: React.FC = () => {
             Continuously expanding expertise through Google Cloud certifications
           </p>
           <a
-            href="#"
+            href="https://www.skills.google/public_profiles/f852ba68-1a19-4e46-a503-1d482e862615"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-slate-800/50 border border-slate-700 text-cyber-primary font-semibold hover:border-cyber-primary hover:shadow-lg hover:shadow-cyber-primary/20 transition-all"
           >
             Verify Credentials
