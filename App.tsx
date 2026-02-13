@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Hero } from './components/Hero';
 import { Summary } from './components/Summary';
 import { TechnicalCredentials } from './components/TechnicalCredentials';
@@ -13,20 +13,49 @@ import { ProjectSQL } from './components/projects/ProjectSQL';
 import { ProjectRBAC } from './components/projects/ProjectRBAC';
 import { Footer } from './components/Footer';
 import { SectionHeading } from './components/ui/SectionHeading';
+import { Navbar } from './components/Navbar';
 import { motion } from 'framer-motion';
+import { translations } from './i18n/translations';
 
 const App: React.FC = () => {
+    const [language, setLanguage] = useState<'en' | 'id'>('id');
+
+    useEffect(() => {
+        const savedLanguage = localStorage.getItem('language') as 'en' | 'id' | null;
+        if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'id')) {
+            setLanguage(savedLanguage);
+        }
+    }, []);
+
+    const handleSetLanguage = (lang: 'en' | 'id') => {
+        setLanguage(lang);
+        localStorage.setItem('language', lang);
+    };
+
+    const t = (key: string): string => {
+        const keys = key.split('.');
+        let value: any = language === 'en' ? translations.en : translations.id;
+        
+        for (const k of keys) {
+            value = value?.[k];
+            if (!value) return key;
+        }
+        
+        return value;
+    };
+
     return (
         <div className="bg-cyber-darker text-slate-200 min-h-screen font-sans selection:bg-cyber-primary selection:text-cyber-darker">
+            <Navbar currentLanguage={language} onLanguageChange={handleSetLanguage} />
 
-            <main>
-                <Hero />
+            <main className="pt-16">
+                <Hero language={language} t={t} />
 
-                <Summary />
+                <Summary language={language} t={t} />
 
-                <TechnicalCredentials />
+                <TechnicalCredentials language={language} t={t} />
 
-                <CaseStudyAIArchitect />
+                <CaseStudyAIArchitect language={language} t={t} />
 
                 <CaseStudyMaduMuria />
 

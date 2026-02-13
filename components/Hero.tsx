@@ -1,96 +1,91 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, ShieldCheck, Cpu } from 'lucide-react';
+import { Terminal, ShieldCheck, PlayCircle, Star } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden pt-20">
-      {/* Background decoration */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-cyber-primary/10 rounded-full blur-[100px]" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyber-secondary/10 rounded-full blur-[100px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-[#0a0a0a] pt-32 pb-20">
+      {/* Subtle Background Glows */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-[100px]" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10 text-center">
-        {/* Profile Photo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="mb-8 flex justify-center"
-        >
-          <div className="relative w-48 h-48 md:w-56 md:h-56">
-            <div className="absolute inset-0 bg-gradient-to-r from-cyber-primary to-cyber-secondary rounded-full opacity-50 blur-xl animate-pulse"></div>
-            <img 
-              src="/profile-photo-updated.png" 
-              alt="Rahmadika Tri Putera" 
-              className="relative w-full h-full rounded-full object-cover border-4 border-cyber-primary shadow-2xl"
-            />
-          </div>
-        </motion.div>
+      <div className="container mx-auto px-6 lg:px-12 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center justify-center p-2 mb-6 rounded-full bg-slate-800/50 border border-slate-700 backdrop-blur-sm"
-        >
-          <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse mr-2"></span>
-          <span className="text-sm font-mono text-slate-300">System Online: Ready for Inspection</span>
-        </motion.div>
+          {/* Left Column: Image (Rectangular Portrait) */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative order-1 lg:order-1"
+          >
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-slate-900">
+              {/* Image Container with aspect ratio if needed, or just standard box */}
+              <img
+                src="/profile-photo-updated.png"
+                alt="Rahmadika Tri Putera"
+                className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700 ease-out"
+                style={{ maxHeight: '600px', objectPosition: 'top' }}
+              />
+              {/* Optional minimal overlay if image is too bright, though reference looks clean */}
+              <div className="absolute inset-0 bg-black/10"></div>
+            </div>
+          </motion.div>
 
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight mb-4 text-white"
-        >
-          Rahmadika Tri Putera
-        </motion.h1>
+          {/* Right Column: Text Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-left order-2 lg:order-2"
+          >
+            {/* Tag/Badge */}
+            <div className="flex items-center gap-2 mb-8">
+              <Star className="text-blue-500 fill-blue-500 w-3 h-3" />
+              <span className="text-blue-500 font-bold tracking-[0.2em] text-xs uppercase">
+                QA Automation Engineer
+              </span>
+            </div>
 
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-xl md:text-3xl font-mono text-cyber-primary mb-6"
-        >
-          Professional QA & AI Architect
-        </motion.h2>
+            {/* Headline */}
+            <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] tracking-tight mb-8">
+              Accelerate Your <br />
+              Release Cycle <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
+                with AI-Powered QA & Automation
+              </span>
+            </h1>
 
-        <motion.p 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
-        >
-          "Membangun sistem yang tangguh, efisien, dan siap menghadapi masa depan."
-        </motion.p>
+            {/* Description Paragraphs */}
+            <div className="space-y-6 text-slate-400 text-lg leading-relaxed max-w-xl mb-10">
+              <p>
+                Expert Quality Assurance with a proven track record in Telecommunication projects (Telkomsel) and ERP systems. I don't just find bugs; I automate the entire testing ecosystem using n8n and Cypress.
+              </p>
+              <p className="text-sm font-medium opacity-80 border-l-2 border-slate-700 pl-4">
+                Proven track record providing technical support for 50+ users and maintaining high-quality internal documentation.
+              </p>
+            </div>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-4"
-        >
-          <a href="#projects" className="px-8 py-3 bg-cyber-primary text-cyber-darker font-bold rounded-lg hover:bg-cyan-300 transition-colors flex items-center gap-2">
-            <ShieldCheck size={20} />
-            View Portfolio
-          </a>
-          <a href="#summary" className="px-8 py-3 bg-slate-800/50 text-white font-semibold rounded-lg hover:bg-slate-700 transition-colors backdrop-blur-sm border border-slate-700 flex items-center gap-2">
-            <Terminal size={20} />
-            Tech Summary
-          </a>
-        </motion.div>
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-5">
+              <a
+                href="#contact"
+                className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] flex items-center justify-center"
+              >
+                Get Free QA Consultation
+              </a>
+              <a
+                href="#projects"
+                className="px-8 py-4 bg-transparent border border-slate-800 hover:bg-slate-900 hover:border-slate-700 text-slate-300 font-semibold rounded-lg transition-all flex items-center justify-center"
+              >
+                View My Automation Samples
+              </a>
+            </div>
+          </motion.div>
 
-        {/* Floating Icons */}
-        <motion.div 
-          animate={{ y: [0, -10, 0] }}
-          transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-          className="absolute -right-4 top-0 md:top-20 opacity-20 hidden md:block"
-        >
-          <Cpu size={64} />
-        </motion.div>
+        </div>
       </div>
     </section>
   );

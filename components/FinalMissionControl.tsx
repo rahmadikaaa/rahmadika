@@ -2,11 +2,29 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FileText, MessageCircle, ArrowRight, Sparkles } from 'lucide-react';
 
-export const FinalMissionControl: React.FC = () => {
+interface FinalMissionControlProps {
+  language?: 'en' | 'id';
+  t?: (key: string) => string;
+}
+
+export const FinalMissionControl: React.FC<FinalMissionControlProps> = ({ language = 'id', t }) => {
+  const getButtonLabel = (key: string): string => {
+    if (!t) {
+      return key === 'downloadCV' 
+        ? (language === 'en' ? 'Download Full CV (PDF)' : 'Download CV Lengkap (PDF)')
+        : (language === 'en' ? 'Chat via WhatsApp' : 'Chat via WhatsApp');
+    }
+    return t(`finalMission.cta.${key}`);
+  };
+
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent(
-      "Halo Rahmadika, saya [Nama] dari [Perusahaan]. Saya melihat portofolio 'The Cognitive QA Architect' Anda dan tertarik untuk berdiskusi lebih lanjut mengenai peluang kolaborasi."
-    );
+    const message = language === 'en'
+      ? encodeURIComponent(
+          "Hello Rahmadika, I am [Name] from [Company]. I saw your portfolio 'The Cognitive QA Architect' and I'm interested in discussing further collaboration opportunities."
+        )
+      : encodeURIComponent(
+          "Halo Rahmadika, saya [Nama] dari [Perusahaan]. Saya melihat portofolio 'The Cognitive QA Architect' Anda dan tertarik untuk berdiskusi lebih lanjut mengenai peluang kolaborasi."
+        );
     const whatsappUrl = `https://wa.me/6281219530902?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -43,16 +61,25 @@ export const FinalMissionControl: React.FC = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            Ready to Secure Your System's <span className="text-cyber-primary">Integrity?</span>
+            {language === 'en' 
+              ? <>Ready to Secure Your System's <span className="text-cyber-primary">Integrity?</span></>
+              : <>Siap untuk Amankan Integritas Sistem Anda?</>
+            }
           </h2>
 
           <p className="text-slate-300 text-lg md:text-xl mb-8 leading-relaxed">
-            Mari berkolaborasi membangun sistem yang berkualitas, cerdas, dan dapat diandalkan dengan standar enterprise yang ketat.
+            {language === 'en'
+              ? "Let's collaborate to build quality, intelligent, and reliable systems with strict enterprise standards."
+              : "Mari berkolaborasi membangun sistem yang berkualitas, cerdas, dan dapat diandalkan dengan standar enterprise yang ketat."
+            }
           </p>
 
           <div className="p-6 rounded-lg bg-gradient-to-r from-cyber-primary/10 to-purple-500/10 border border-cyber-primary/30 mb-8">
             <p className="text-slate-200 font-semibold">
-              ✨ Saat ini saya sedang membuka peluang kolaborasi untuk peran <span className="text-cyber-primary">Quality Assurance</span> atau <span className="text-cyan-400">AI Automation Architect</span>.
+              ✨ {language === 'en'
+                ? <>I'm currently opening collaboration opportunities for <span className="text-cyber-primary">Quality Assurance</span> or <span className="text-cyan-400">AI Automation Architect</span>.</>
+                : <>Saat ini saya sedang membuka peluang kolaborasi untuk peran <span className="text-cyber-primary">Quality Assurance</span> atau <span className="text-cyan-400">AI Automation Architect</span>.</>
+              }
             </p>
           </div>
 
@@ -75,7 +102,7 @@ export const FinalMissionControl: React.FC = () => {
               {/* Content */}
               <div className="relative z-10 flex items-center justify-center gap-2 text-cyber-darker">
                 <FileText size={20} />
-                <span>Download Full CV (PDF)</span>
+                <span>{getButtonLabel('downloadCV')}</span>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </div>
             </motion.button>
@@ -96,7 +123,7 @@ export const FinalMissionControl: React.FC = () => {
               {/* Content */}
               <div className="relative z-10 flex items-center justify-center gap-2 text-white group-hover:text-cyan-300 transition-colors">
                 <MessageCircle size={20} />
-                <span>Chat via WhatsApp</span>
+                <span>{getButtonLabel('whatsapp')}</span>
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </div>
             </motion.button>
@@ -105,13 +132,19 @@ export const FinalMissionControl: React.FC = () => {
           {/* Supporting Text */}
           <div className="space-y-4 text-slate-400 text-sm">
             <p>
-              💼 Spesialisasi: Quality Assurance Architecture, AI Automation, DevOps Strategy, Data-Driven Marketing
+              {language === 'en'
+                ? '💼 Specialization: Quality Assurance Architecture, AI Automation, DevOps Strategy, Data-Driven Marketing'
+                : '💼 Spesialisasi: Quality Assurance Architecture, AI Automation, DevOps Strategy, Data-Driven Marketing'
+              }
             </p>
             <p>
               🎯 Teknologi: GCP, n8n, LLM Integration, Meta API, BigQuery, Terraform, CI/CD
             </p>
             <p>
-              📊 Bukti Kesuksesan: 3+ case studies dengan ROI terukur, 80% task automation, 99.95% system uptime
+              {language === 'en'
+                ? '📊 Proof of Success: 3+ case studies with measurable ROI, 80% task automation, 99.95% system uptime'
+                : '📊 Bukti Kesuksesan: 3+ case studies dengan ROI terukur, 80% task automation, 99.95% system uptime'
+              }
             </p>
           </div>
         </motion.div>
@@ -126,11 +159,15 @@ export const FinalMissionControl: React.FC = () => {
         >
           <div className="p-4 rounded-lg bg-slate-800/30 border border-slate-700 text-center">
             <div className="text-2xl font-bold text-cyber-primary mb-2">3+</div>
-            <p className="text-sm text-slate-400">Complete Case Studies</p>
+            <p className="text-sm text-slate-400">
+              {language === 'en' ? 'Complete Case Studies' : 'Case Study Lengkap'}
+            </p>
           </div>
           <div className="p-4 rounded-lg bg-slate-800/30 border border-slate-700 text-center">
-            <div className="text-2xl font-bold text-cyan-400 mb-2">2+ Years</div>
-            <p className="text-sm text-slate-400">QA Manual & Automation Experience</p>
+            <div className="text-2xl font-bold text-cyan-400 mb-2">2+ {language === 'en' ? 'Years' : 'Tahun'}</div>
+            <p className="text-sm text-slate-400">
+              {language === 'en' ? 'QA Manual & Automation Experience' : 'Pengalaman QA Manual & Automation'}
+            </p>
           </div>
           <div className="p-4 rounded-lg bg-slate-800/30 border border-slate-700 text-center">
             <div className="text-2xl font-bold text-purple-400 mb-2">3.2x</div>
