@@ -13,7 +13,7 @@ import { ProjectSQL } from './components/projects/ProjectSQL';
 import { ProjectRBAC } from './components/projects/ProjectRBAC';
 import { Footer } from './components/Footer';
 import { SectionHeading } from './components/ui/SectionHeading';
-import { Navbar } from './components/Navbar';
+import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { motion } from 'framer-motion';
 import { translations } from './i18n/translations';
 
@@ -46,9 +46,9 @@ const App: React.FC = () => {
 
     return (
         <div className="bg-cyber-darker text-slate-200 min-h-screen font-sans selection:bg-cyber-primary selection:text-cyber-darker">
-            <Navbar currentLanguage={language} onLanguageChange={handleSetLanguage} />
+            <LanguageSwitcher currentLanguage={language} onLanguageChange={handleSetLanguage} />
 
-            <main className="pt-16">
+            <main>
                 <Hero language={language} t={t} />
 
                 <Summary language={language} t={t} />
