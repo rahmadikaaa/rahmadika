@@ -7,16 +7,7 @@ interface FinalMissionControlProps {
   t?: (key: string) => string;
 }
 
-export const FinalMissionControl: React.FC<FinalMissionControlProps> = ({ language = 'id', t }) => {
-  const getButtonLabel = (key: string): string => {
-    if (!t) {
-      return key === 'downloadCV' 
-        ? (language === 'en' ? 'Download Full CV (PDF)' : 'Download CV Lengkap (PDF)')
-        : (language === 'en' ? 'Chat via WhatsApp' : 'Chat via WhatsApp');
-    }
-    return t(`finalMission.cta.${key}`);
-  };
-
+export const FinalMissionControl: React.FC<FinalMissionControlProps> = ({ language = 'id', t = (key) => key }) => {
   const handleWhatsAppClick = () => {
     const message = language === 'en'
       ? encodeURIComponent(
