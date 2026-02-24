@@ -11,11 +11,11 @@ export const FinalMissionControl: React.FC<FinalMissionControlProps> = ({ langua
   const handleWhatsAppClick = () => {
     const message = language === 'en'
       ? encodeURIComponent(
-          "Hello Rahmadika, I am [Name] from [Company]. I saw your portfolio 'The Cognitive QA Architect' and I'm interested in discussing further collaboration opportunities."
-        )
+        "Hello Rahmadika, I am [Name] from [Company]. I saw your portfolio 'The Cognitive QA Architect' and I'm interested in discussing further collaboration opportunities."
+      )
       : encodeURIComponent(
-          "Halo Rahmadika, saya [Nama] dari [Perusahaan]. Saya melihat portofolio 'The Cognitive QA Architect' Anda dan tertarik untuk berdiskusi lebih lanjut mengenai peluang kolaborasi."
-        );
+        "Halo Rahmadika, saya [Nama] dari [Perusahaan]. Saya melihat portofolio 'The Cognitive QA Architect' Anda dan tertarik untuk berdiskusi lebih lanjut mengenai peluang kolaborasi."
+      );
     const whatsappUrl = `https://wa.me/6281219530902?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -23,6 +23,20 @@ export const FinalMissionControl: React.FC<FinalMissionControlProps> = ({ langua
   const handleCVDownload = () => {
     // CV download logic - akan mengarah ke file CV yang di-host
     window.open('/cv/Rahmadika-Tri-Putera-CV.html', '_blank');
+  };
+
+  const getButtonLabel = (key: string): string => {
+    const labels: Record<string, Record<string, string>> = {
+      downloadCV: {
+        en: 'Download CV',
+        id: 'Download CV',
+      },
+      whatsapp: {
+        en: 'Chat on WhatsApp',
+        id: 'Chat via WhatsApp',
+      },
+    };
+    return labels[key]?.[language] ?? key;
   };
 
   return (
@@ -52,7 +66,7 @@ export const FinalMissionControl: React.FC<FinalMissionControlProps> = ({ langua
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-            {language === 'en' 
+            {language === 'en'
               ? <>Ready to Secure Your System's <span className="text-cyber-primary">Integrity?</span></>
               : <>Siap untuk Amankan Integritas Sistem Anda?</>
             }

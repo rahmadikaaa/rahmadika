@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Hero } from './components/Hero';
 import { Summary } from './components/Summary';
 import { TechnicalCredentials } from './components/TechnicalCredentials';
@@ -8,6 +8,7 @@ import { CaseStudyMaduMuria } from './components/CaseStudyMaduMuria';
 import { CaseStudyMulyaDiesel } from './components/CaseStudyMulyaDiesel';
 import { CaseStudyTemplate } from './components/CaseStudyTemplate';
 import { FinalMissionControl } from './components/FinalMissionControl';
+import { ProjectOjolBoost } from './components/projects/ProjectOjolBoost';
 import { ProjectCRM } from './components/projects/ProjectCRM';
 import { ProjectSQL } from './components/projects/ProjectSQL';
 import { ProjectRBAC } from './components/projects/ProjectRBAC';
@@ -15,47 +16,22 @@ import { Footer } from './components/Footer';
 import { SectionHeading } from './components/ui/SectionHeading';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
 import { motion } from 'framer-motion';
-import { translations } from './i18n/translations';
+
 
 const App: React.FC = () => {
-    const [language, setLanguage] = useState<'en' | 'id'>('id');
-
-    useEffect(() => {
-        const savedLanguage = localStorage.getItem('language') as 'en' | 'id' | null;
-        if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'id')) {
-            setLanguage(savedLanguage);
-        }
-    }, []);
-
-    const handleSetLanguage = (lang: 'en' | 'id') => {
-        setLanguage(lang);
-        localStorage.setItem('language', lang);
-    };
-
-    const t = (key: string): string => {
-        const keys = key.split('.');
-        let value: any = language === 'en' ? translations.en : translations.id;
-        
-        for (const k of keys) {
-            value = value?.[k];
-            if (!value) return key;
-        }
-        
-        return value;
-    };
 
     return (
         <div className="bg-cyber-darker text-slate-200 min-h-screen font-sans selection:bg-cyber-primary selection:text-cyber-darker">
-            <LanguageSwitcher currentLanguage={language} onLanguageChange={handleSetLanguage} />
+            <LanguageSwitcher />
 
             <main>
-                <Hero language={language} t={t} />
+                <Hero />
 
-                <Summary language={language} t={t} />
+                <Summary />
 
-                <TechnicalCredentials language={language} t={t} />
+                <TechnicalCredentials />
 
-                <CaseStudyAIArchitect language={language} t={t} />
+                <CaseStudyAIArchitect />
 
                 <CaseStudyMaduMuria />
 
@@ -74,6 +50,16 @@ const App: React.FC = () => {
                         />
 
                         <div className="space-y-24 max-w-5xl mx-auto">
+                            {/* Project 0 - OjolBoost */}
+                            <motion.div
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-100px" }}
+                                transition={{ duration: 0.6 }}
+                            >
+                                <ProjectOjolBoost />
+                            </motion.div>
+
                             {/* Project 1 */}
                             <motion.div
                                 initial={{ opacity: 0, y: 50 }}
